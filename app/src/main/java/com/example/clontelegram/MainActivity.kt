@@ -2,8 +2,12 @@ package com.example.clontelegram
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.example.clontelegram.databinding.ActivityMainBinding
+import com.example.clontelegram.ui.ChatsFragment
+import com.example.clontelegram.ui.SettingsFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -11,6 +15,7 @@ import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.DividerDrawerItem
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityMainBinding
@@ -32,6 +37,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFinc() {
         setSupportActionBar(mToolbar)
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.dataContainer,ChatsFragment()).commit()
         createHeader()
         createDrawer()
     }
@@ -45,50 +52,56 @@ class MainActivity : AppCompatActivity() {
             .withAccountHeader(mHeader)
             .addDrawerItems(
                 PrimaryDrawerItem()
-                    .withIdentifier(100)
+                    .withIdentifier(101)
                     .withIconTintingEnabled(true)
                     .withName("Создать группу")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_create_groups),
                 PrimaryDrawerItem()
-                    .withIdentifier(101)
+                    .withIdentifier(102)
                     .withIconTintingEnabled(true)
                     .withName("Создать секретный чат")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_secret_chat),
                 PrimaryDrawerItem()
-                    .withIdentifier(102)
+                    .withIdentifier(103)
                     .withIconTintingEnabled(true)
                     .withName("Создать канал")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_create_channel),
                 PrimaryDrawerItem()
-                    .withIdentifier(103)
+                    .withIdentifier(104)
                     .withIconTintingEnabled(true)
                     .withName("Контакты")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_contacts),
                 PrimaryDrawerItem()
-                    .withIdentifier(104)
+                    .withIdentifier(105)
                     .withIconTintingEnabled(true)
                     .withName("Звонки")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_phone),
                 PrimaryDrawerItem()
-                    .withIdentifier(105)
+                    .withIdentifier(106)
+                    .withIconTintingEnabled(true)
+                    .withName("Избранное ")
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_menu_favorites),
+                PrimaryDrawerItem()
+                    .withIdentifier(107)
                     .withIconTintingEnabled(true)
                     .withName("Настройки")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_settings),
                 DividerDrawerItem(),
                 PrimaryDrawerItem()
-                    .withIdentifier(106)
+                    .withIdentifier(108)
                     .withIconTintingEnabled(true)
                     .withName("Пригласить друзей")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_invate),
                 PrimaryDrawerItem()
-                    .withIdentifier(107)
+                    .withIdentifier(109)
                     .withIconTintingEnabled(true)
                     .withName("Вопросы о Telegram")
                     .withSelectable(false)
@@ -96,7 +109,22 @@ class MainActivity : AppCompatActivity() {
 
 
 
-            ).build()
+            ).withOnDrawerItemClickListener(object :Drawer.OnDrawerItemClickListener{
+                override fun onItemClick(
+                    view: View?,
+                    position: Int,
+                    drawerItem: IDrawerItem<*>
+                ): Boolean {
+                    when (position){7->supportFragmentManager.beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.dataContainer,SettingsFragment()).commit()
+
+                    }
+
+                    return false
+                }
+
+            }).build()
     }
 
     private fun createHeader() {
