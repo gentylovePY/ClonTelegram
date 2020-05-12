@@ -8,5 +8,9 @@
     <!--Settings fragment-->
     <dimen name="settings_user_photo_width">60dp</dimen>
     <dimen name="settings_user_photo_height">60dp</dimen>
+
+    <dimen name="settings_btn_change_photo_width">49dp</dimen>
+    <dimen name="settings_btn_change_photo_height">49dp</dimen>
     <dimen name="vertical_large_margin">16dp</dimen>
+    <dimen name="settings_riple_effecct_rafius">4dp</dimen>
 </resources>

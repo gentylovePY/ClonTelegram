@@ -1,5 +1,7 @@
 package com.example.clontelegram.ui.fragments
 
+import android.view.Menu
+import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import com.example.clontelegram.R
 
@@ -14,4 +16,8 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
         super.onResume()
 
     }
+
+
+
+
 }
