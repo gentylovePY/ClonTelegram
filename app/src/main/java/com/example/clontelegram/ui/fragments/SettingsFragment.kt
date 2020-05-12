@@ -2,22 +2,20 @@ package com.example.clontelegram.ui.fragments
 
 import android.view.Menu
 import android.view.MenuInflater
-import androidx.fragment.app.Fragment
 import com.example.clontelegram.R
 
-/**
- * A simple [Fragment] subclass.
- */
 class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
-
 
 
     override fun onResume() {
         super.onResume()
 
+        setHasOptionsMenu(true)
     }
 
-
-
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        activity?.menuInflater?.inflate(R.menu.settings_menu, menu)
+    }
 
 }
