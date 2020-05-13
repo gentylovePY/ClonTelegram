@@ -4,6 +4,7 @@
     <dimen name="horizontal_margin">16dp</dimen>
     <dimen name="normalText">18sp</dimen>
     <dimen name="vertical_margin">10dp</dimen>
+
     <dimen name="smallText">14sp</dimen>
     <!--Settings fragment-->
     <dimen name="settings_user_photo_width">60dp</dimen>
@@ -13,4 +14,5 @@
     <dimen name="settings_btn_change_photo_height">49dp</dimen>
     <dimen name="vertical_large_margin">16dp</dimen>
     <dimen name="settings_riple_effecct_rafius">4dp</dimen>
+    <dimen name="appPadding">5dp</dimen>
 </resources>

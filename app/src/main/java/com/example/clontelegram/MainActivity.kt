@@ -1,9 +1,11 @@
 package com.example.clontelegram
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.clontelegram.activities.RegisterActivity
 import com.example.clontelegram.databinding.ActivityMainBinding
 import com.example.clontelegram.ui.fragments.ChatsFragment
 import com.example.clontelegram.ui.objects.AppDrawer
@@ -28,13 +30,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFinc() {
-        setSupportActionBar(mToolbar)
-        mAppDrawer.create()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.dataContainer,
-                ChatsFragment()
-            ).commit()
-
+        if (false) {
+            setSupportActionBar(mToolbar)
+            mAppDrawer.create()
+            supportFragmentManager.beginTransaction()
+                .replace(
+                    R.id.dataContainer,
+                    ChatsFragment()
+                ).commit()
+        }else{
+            val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
