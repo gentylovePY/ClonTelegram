@@ -17,5 +17,6 @@
     <string name="cd_register_image">register_image</string>
     <string name="register_text_enter_code">Введите код</string>
     <string name="register_text_we_sent">Мы отправили SMS с кодом проверки на ваш телефон</string>
-    <string name="register_title_your_phone">\"Ваш телефон \"</string>
+    <string name="register_title_your_phone">\Ваш телефон \</string>
+    <string name="register_toast_enter_phone">\Введите номер телефона \</string>
 </resources>

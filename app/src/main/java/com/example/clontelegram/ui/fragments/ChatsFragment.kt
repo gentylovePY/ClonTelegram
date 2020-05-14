@@ -1,7 +1,5 @@
 package com.example.clontelegram.ui.fragments
 
-import android.view.Menu
-import android.view.MenuInflater
 import com.example.clontelegram.R
 
 
