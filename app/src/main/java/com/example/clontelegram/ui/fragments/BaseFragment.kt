@@ -11,16 +11,10 @@ import com.example.clontelegram.R
 /**
  * A simple [Fragment] subclass.
  */
-open class BaseFragment(val layout: Int) : Fragment() {
-    private lateinit var mRootView: View
+open class BaseFragment(val layout: Int) : Fragment(layout) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        mRootView = inflater.inflate(layout, container, false)
-        return mRootView
-    }
+
+
 
     override fun onStart() {
         super.onStart()

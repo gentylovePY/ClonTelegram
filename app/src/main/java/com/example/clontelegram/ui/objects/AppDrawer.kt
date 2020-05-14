@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.clontelegram.R
 import com.example.clontelegram.ui.fragments.SettingsFragment
+import com.example.clontelegram.utilits.replaceFragmeny
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -94,11 +95,7 @@ fun create(){
                     position: Int,
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
-                    when (position){7->mainActivity.supportFragmentManager.beginTransaction()
-                        .addToBackStack(null)
-                        .replace(R.id.dataContainer,
-                            SettingsFragment()
-                        ).commit()
+                    when (position){7->mainActivity.replaceFragmeny(SettingsFragment())
 
                     }
 
