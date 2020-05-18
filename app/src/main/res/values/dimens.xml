@@ -14,5 +14,5 @@
     <dimen name="settings_btn_change_photo_height">49dp</dimen>
     <dimen name="vertical_large_margin">16dp</dimen>
     <dimen name="settings_riple_effecct_rafius">4dp</dimen>
-    <dimen name="appPadding">5dp</dimen>
+    <dimen name="appPadding">10dp</dimen>
 </resources>
