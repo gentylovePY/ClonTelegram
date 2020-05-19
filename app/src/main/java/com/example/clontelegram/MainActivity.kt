@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         if (AUTH.currentUser!=null) {
             setSupportActionBar(mToolbar)
             mAppDrawer.create()
-            replaceFragmeny(ChatsFragment())
+            replaceFragmeny(ChatsFragment(),false)
         }else{
             replaceActivity(RegisterActivity())
 
