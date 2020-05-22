@@ -93,7 +93,7 @@
         <item name="android:padding">@dimen/appPadding</item>
         <item name="android:textColor">@color/colorBlack</item>
         <item name="android:textSize">@dimen/normalText</item>
-        <item name="android:autofillHints"></item>
+        <item name="android:textColorHint">@color/colorGreey</item>
         <item name="android:maxLines">1</item>
         <item name="android:inputType">phone</item>
     </style>
