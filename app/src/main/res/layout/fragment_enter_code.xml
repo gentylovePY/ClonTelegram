@@ -49,7 +49,7 @@
         style="@style/editRegisterText"
         android:autofillHints=""
         android:gravity="center"
-        android:hint="_ _ _ _ _ _"
+        android:hint="@string/hint_in_fr_enter_code"
         android:maxLength="6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

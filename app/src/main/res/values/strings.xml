@@ -19,4 +19,6 @@
     <string name="register_text_we_sent">Мы отправили SMS с кодом проверки на ваш телефон</string>
     <string name="register_title_your_phone">\Ваш телефон \</string>
     <string name="register_toast_enter_phone">\Введите номер телефона \</string>
+    <string name="hint_in_fr_enter_phone_number">-- -- -- -- -- --</string>
+    <string name="hint_in_fr_enter_code">_ _ _ _ _ _</string>
 </resources>
