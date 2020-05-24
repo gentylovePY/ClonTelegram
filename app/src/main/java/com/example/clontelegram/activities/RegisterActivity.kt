@@ -11,6 +11,7 @@ import com.example.clontelegram.utilits.replaceFragmeny
 class RegisterActivity : AppCompatActivity() {
     private lateinit var mBinding:ActivityRegisterBinding
     private lateinit var mToolbar:Toolbar
+    private lateinit var nTooks:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
