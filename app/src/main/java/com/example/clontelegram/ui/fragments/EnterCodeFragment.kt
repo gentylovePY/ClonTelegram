@@ -39,7 +39,7 @@ class EnterCodeFragment(val phoneNumber: String, val id: String) :
         val credential:PhoneAuthCredential = PhoneAuthProvider.getCredential(id, code)
         AUTH.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                showToast("ДОбро пожаловать")
+                showToast("Добро пожаловать")
                 (activity as RegisterActivity).replaceActivity(MainActivity())
             } else showToast(task.exception?.message.toString())
         }
